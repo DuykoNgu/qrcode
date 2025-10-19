@@ -207,10 +207,10 @@
 }
 
 .back {
-  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  background: linear-gradient(135deg, #ffeef7, #fce4ec);
   transform: rotateY(-180deg);
   z-index: 1;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(255, 182, 193, 0.3);
 }
 
 .wrapper.open .front {
@@ -237,9 +237,10 @@
 
 .back-content p {
   font-size: 1.1rem;
-  color: #555;
+  color: #8b4a6b;
   line-height: 1.6;
   margin-bottom: 30px;
+  font-weight: 500;
 }
 
 .flowers {
