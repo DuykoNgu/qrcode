@@ -12,11 +12,16 @@
   align-items: center;
   font-family: "Segoe UI", cursive, sans-serif;
   /* Animated pastel gradient */
-  background: linear-gradient(-45deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
+  background: linear-gradient(-45deg, #ffecd2, #fcb69f, #ffb3d1, #ffc0cb);
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite;
   overflow: hidden;
   position: relative;
+  /* Optimize for mobile performance */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 /* Soft glowing blobs for depth */
@@ -310,6 +315,13 @@
 @media (max-width: 768px) {
   .greeting-body {
     padding: 20px;
+    /* Reduce animation intensity on mobile */
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  /* Reduce petal animation on mobile */
+  .petals span {
+    animation: petalFall 8s linear infinite, petalSwing 6s ease-in-out infinite;
   }
 
   .wrapper {
